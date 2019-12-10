@@ -1,6 +1,7 @@
 package at.fhcampuswien;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
@@ -20,18 +21,12 @@ public class Main {
         //Position2 = 2
         String file = "2.txt";
 
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line = "";
-        String allLines = "";
-        Integer number = 0;
+        String[] allLines = FileUtil.readFile(file);
+        String line = FileUtil.combine(allLines);
 
-        while ((line = reader.readLine()) != null) {
-            allLines = allLines + line;
-        }
+        System.out.println(line);
 
-        System.out.println(allLines);
-
-        String[] tmp = allLines.split(",");
+        String[] tmp = line.split(",");
         int[] numbers = new int[tmp.length];
 
         for (int i = 0; i < tmp.length; i++) {
@@ -90,18 +85,10 @@ public class Main {
         //Position2 = 2
         String file = "2.txt";
 
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line = "";
-        String allLines = "";
-        Integer number = 0;
+        String[] allLines = FileUtil.readFile(file);
+        String line = FileUtil.combine(allLines);
 
-        while ((line = reader.readLine()) != null) {
-            allLines = allLines + line;
-        }
-
-        System.out.println(allLines);
-
-        String[] tmp = allLines.split(",");
+        String[] tmp = line.split(",");
         Integer[] numbers = new Integer[tmp.length];
 
         for (int i = 0; i < tmp.length; i++) {
@@ -129,44 +116,22 @@ public class Main {
             opcode = numbers[index];
         }
 
-        System.out.println("result exam3:" + Integer.toString(numbers[0]));
-
-        reader.close();
-    }
-
-    public static void exam1() throws IOException {
-        String file = "1.txt";
-
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line;
-        Integer number = 0;
-
-        while ((line = reader.readLine()) != null) {
-            System.out.println(line);
-            Integer mass = Integer.parseInt(line);
-            number += calculateMass(mass);
-        }
-
-        reader.close();
-
-        System.out.println("result exam1: " + Integer.toString(number));
+        System.out.println("result exam3: " + Integer.toString(numbers[0]));
     }
 
     public static void exam2() throws IOException {
         String file = "1.txt";
 
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line;
         Integer number = 0;
 
-        while ((line = reader.readLine()) != null) {
+        String[] lines = FileUtil.readFile(file);
+
+        for(String line : lines){
             System.out.println(line);
             Integer mass = Integer.parseInt(line);
             System.out.println("fuel: " + calculateFuel(mass));
             number = number + calculateFuel(mass);
         }
-
-        reader.close();
 
         System.out.println("result exam2: " + Integer.toString(number));
     }
@@ -184,6 +149,22 @@ public class Main {
         }
 
         return fuel;
+    }
+
+    public static void exam1() throws IOException {
+        String file = "1.txt";
+
+        Integer number = 0;
+
+        String[] lines = FileUtil.readFile(file);
+
+        for(String line : lines){
+            System.out.println(line);
+            Integer mass = Integer.parseInt(line);
+            number += calculateMass(mass);
+        }
+
+        System.out.println("result exam1: " + Integer.toString(number));
     }
 
     public static Integer calculateMass(Integer mass) {
