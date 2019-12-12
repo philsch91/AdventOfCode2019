@@ -1,13 +1,10 @@
-package at.fhcampuswien;
+package at.fhcampuswien.adventofcode;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.util.Arrays;
 
-public class Main {
-
+public class App {
     public static void main(String[] args) throws IOException {
         System.out.println("Hello World");
         //exam1();
@@ -172,5 +169,4 @@ public class Main {
         mass = mass - 2;
         return mass;
     }
-
 }
