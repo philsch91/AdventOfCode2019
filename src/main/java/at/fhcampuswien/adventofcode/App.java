@@ -2,7 +2,9 @@ package at.fhcampuswien.adventofcode;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -10,7 +12,86 @@ public class App {
         //exam1();
         //exam2();
         //exam3();
-        exam4();
+        //exam4();
+        exam5();
+    }
+
+    public static void exam5() throws IOException {
+        String file = "day3.txt";
+        String[] allLines = FileUtil.readFile(file);
+
+        String[] w1 = allLines[0].split(",");
+        String[] w2 = allLines[1].split(",");
+
+        int x = 0;
+        int y = 0;
+
+        Point[] wire1 = parseWire(w1);
+        Point[] wire2 = parseWire(w2);
+
+        //Point[]
+
+    }
+
+    public static int calculateManhattanDistance(Point point){
+        return Math.abs(point.x) + Math.abs(point.y);
+    }
+
+    public static Point[] extractIntersectionPoints(Point[]... pointArrays){
+        List<Point> pointList = new ArrayList<Point>();
+        Integer pathCount = pointArrays.length;
+
+        if (pathCount == 0){
+            return pointList.toArray(new Point[0]);
+        }
+
+        Integer i = 0;
+
+        while((i+1) <= pathCount){
+            for(Point point1 : pointArrays[i+1]) {
+                for(Point point2 : pointArrays[i]){
+                    if (point2.equals(point1)){
+                        pointList.add(point1);
+                    }
+                }
+            }
+            i++;
+        }
+
+        return pointList.toArray(new Point[0]);
+    }
+
+    public static Point[] parseWire(String[] wire){
+        Point[] points = new Point[wire.length+1];
+
+        int x = 0;
+        int y = 0;
+
+        points[0] = new Point(x, y);
+
+        int i = 1;
+        for(String str: wire){
+            String direction = str.substring(0,1);
+            Integer length = Integer.parseInt(str.substring(1));
+
+            if (direction.equals("R")){
+                x += length;
+            } else if (direction.equals("D")){
+                y -= length;
+            } else if (direction.equals("L")){
+                x -= length;
+            } else if (direction.equals("U")){
+                y += length;
+            }
+
+            Point point = new Point(x, y);
+            System.out.println(point);
+
+            points[i] = point;
+            i++;
+        }
+
+        return points;
     }
 
     public static void exam4() throws IOException {
