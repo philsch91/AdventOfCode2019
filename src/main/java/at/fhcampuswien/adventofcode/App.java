@@ -29,8 +29,21 @@ public class App {
         Point[] wire1 = parseWire(w1);
         Point[] wire2 = parseWire(w2);
 
-        //Point[]
+        System.out.println("wires parsed");
+        Point[] intersectionPoints = extractIntersectionPoints(wire1, wire2);
 
+        Integer leastDistance = calculateManhattanDistance(intersectionPoints[1]);
+
+        for(Point p : intersectionPoints){
+            System.out.println(p);
+            if(p.x == 0 && p.y == 0) continue;
+            Integer manhattanDistance  = calculateManhattanDistance(p);
+            if (manhattanDistance < leastDistance) {
+                leastDistance = manhattanDistance;
+            }
+        }
+
+        System.out.println("result exam 5: " + Integer.toString(leastDistance));
     }
 
     public static int calculateManhattanDistance(Point point){
@@ -41,38 +54,57 @@ public class App {
         List<Point> pointList = new ArrayList<Point>();
         Integer pathCount = pointArrays.length;
 
-        if (pathCount == 0){
+        if (pathCount <= 1){
             return pointList.toArray(new Point[0]);
         }
 
         Integer i = 0;
+        Integer j = 0;
+        System.out.println(pointArrays[i].length);
 
-        while((i+1) <= pathCount){
-            for(Point point1 : pointArrays[i+1]) {
-                for(Point point2 : pointArrays[i]){
+        for(Point point1 : pointArrays[i]){
+            boolean exists = true;
+            i = 0;
+
+            while((i+1) < pathCount && exists){
+                boolean equals = false;
+                for(Point point2 : pointArrays[i+1]){
                     if (point2.equals(point1)){
-                        pointList.add(point1);
+                        equals = true;
                     }
                 }
+                exists = equals;
+                i++;
             }
-            i++;
+
+            if (exists){
+                pointList.add(point1);
+            }
+
+            System.out.println(j);
+            j++;
         }
 
         return pointList.toArray(new Point[0]);
     }
 
     public static Point[] parseWire(String[] wire){
-        Point[] points = new Point[wire.length+1];
+        //Point[] points = new Point[wire.length+1];
+        List<Point> pointList = new ArrayList<Point>();
 
         int x = 0;
         int y = 0;
 
-        points[0] = new Point(x, y);
+        //points[0] = new Point(x, y);
+        //pointList.add(new Point(x, y));
 
         int i = 1;
         for(String str: wire){
             String direction = str.substring(0,1);
             Integer length = Integer.parseInt(str.substring(1));
+
+            Integer xi = x;
+            Integer yi = y;
 
             if (direction.equals("R")){
                 x += length;
@@ -84,14 +116,34 @@ public class App {
                 y += length;
             }
 
-            Point point = new Point(x, y);
-            System.out.println(point);
+            Integer maxX = Math.max(x, xi);
+            Integer minX = Math.min(x, xi);
+            Integer maxY = Math.max(y, yi);
+            Integer minY = Math.min(y, yi);
 
-            points[i] = point;
-            i++;
+            while(minX <= maxX){
+                Point point = new Point(minX, y);
+                //System.out.println(point);
+                pointList.add(point);
+                minX++;
+            }
+
+            while(minY <= maxY){
+                Point point = new Point(x, minY);
+                //System.out.println(point);
+                pointList.add(point);
+                minY++;
+            }
+
+            //Point point = new Point(x, y);
+            //System.out.println(point);
+
+            //points[i] = point;
+            //pointList.add(point);
+            //i++;
         }
 
-        return points;
+        return pointList.toArray(new Point[0]);
     }
 
     public static void exam4() throws IOException {
