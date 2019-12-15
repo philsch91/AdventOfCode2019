@@ -1,4 +1,4 @@
-package at.fhcampuswien.adventofcode;
+package at.fhcampuswien.adventofcode.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
