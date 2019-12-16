@@ -1,0 +1,10 @@
+
+:squid:S1643""Use a StringBuilder instead.(ÕÅôŞ8¯»Ÿİï-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥¢Äııÿÿÿÿ8¯»Ÿİï-
+Nsquid:S1481"+Remove this unused "number" local variable.(‹î¨Øúÿÿÿÿ8¯»Ÿİï-
+€squid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "lines".(Ù€ûñûÿÿÿÿ8¯»Ÿİï-
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(®ùˆ8¯»Ÿİï-
+|squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÊñÅşÿÿÿÿ8¯»Ÿİï-
+]squid:S1118	":Add a private constructor to hide the implicit public one.(‡ÛŸÚıÿÿÿÿ8¯»Ÿİï-
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(œ‡‘ˆùÿÿÿÿ8¯»Ÿİï-
+osquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(õéµ¨ûÿÿÿÿ8¯»Ÿİï-

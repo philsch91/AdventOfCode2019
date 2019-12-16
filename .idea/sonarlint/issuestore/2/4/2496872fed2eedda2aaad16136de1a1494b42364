@@ -1,41 +1,76 @@
 
-Isquid:S1481"&Remove this unused "y" local variable.(ºš¿»ùÿÿÿÿ8Ë×ùşï-
-nsquid:CommentedOutCodeLine~"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8‰¥‡†ğ-
-Dsquid:S1481e"&Remove this unused "i" local variable.(»ŸÜš8‰¥‡†ğ-
-[
-squid:S106T"9Replace this use of System.out or System.err by a logger.(Ã”…ªûÿÿÿÿ8¥¥ó†ğ-
-hsquid:CommentedOutCodeLine\"<This block of commented-out lines of code should be removed.(êÒÅ.8…×’†ğ-
+xsquid:S2293Á"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8æ«Úğ-
+osquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(ÙÊÛúşÿÿÿÿ8æ«Úğ-
 W
-squid:S106º"9Replace this use of System.out or System.err by a logger.(÷¬ º8…×’†ğ-
+squid:S106Ê"9Replace this use of System.out or System.err by a logger.(Ëğ¬Æ8æ«Úğ-
+xsquid:S2293è"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8æ«Úğ-
 [
-squid:S106&"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8ƒÃ†ğ-
+squid:S106="9Replace this use of System.out or System.err by a logger.(Íû©ùÿÿÿÿ8æ«Úğ-
+osquid:CommentedOutCodeLine‰"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8û—Úğ-
+\
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8æ«Úğ-
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(ü¿¸8œ¨şÙğ-
+osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(ş×¿Èùÿÿÿÿ8æ«Úğ-
+\
+squid:S106„"9Replace this use of System.out or System.err by a logger.(Œ’ıÿÿÿÿ8æ«Úğ-
+[
+squid:S106)"9Replace this use of System.out or System.err by a logger.(ÕÒİ ÿÿÿÿÿ8œ¨şÙğ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢œÙ“üÿÿÿÿ8œ¨şÙğ-
+W
+squid:S106•"9Replace this use of System.out or System.err by a logger.(Àå‹æ8æ«Úğ-
+\
+squid:S106¨"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8æ«Úğ-
+ysquid:S1149K"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(Á¥çõùÿÿÿÿ8û—Úğ-
+isquid:CommentedOutCodeLineN"<This block of commented-out lines of code should be removed.(ğí„Œ8æ«Úğ-
+Œsquid:S1319J"oThe return type of this method should be an interface such as "Map" rather than the implementation "Hashtable".(ÑéÁz8æ«Úğ-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(„ìÎò8£ÑƒÚğ-
+[
+squid:S106_"9Replace this use of System.out or System.err by a logger.(¯¿Ÿ©úÿÿÿÿ8æ«Úğ-
+[
+squid:S1065"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8œ¨şÙğ-
+ysquid:S1149,"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(·ÂÆ…üÿÿÿÿ8œ¨şÙğ-
 V
-squid:S106?"9Replace this use of System.out or System.err by a logger.(Ëğ¬Æ8µß„ğ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹ëŒ8œ¨şÙğ-
+isquid:CommentedOutCodeLineç"<This block of commented-out lines of code should be removed.(êÒÅ.8æ«Úğ-
+U
+squid:S106!"9Replace this use of System.out or System.err by a logger.(ü¿¸8»ÑÅĞğ-
 \
-squid:S106ù"9Replace this use of System.out or System.err by a logger.(Œ’ıÿÿÿÿ8…×’†ğ-
-\
-squid:S106¤"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8…×’†ğ-
-osquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(ş×¿Èùÿÿÿÿ8…×’†ğ-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(„ìÎò8ûïºİï-
-nsquid:CommentedOutCodeLineb"<This block of commented-out lines of code should be removed.(ÙÊÛúşÿÿÿÿ8…×’†ğ-
-Isquid:S1481"&Remove this unused "x" local variable.(¾„ëüÿÿÿÿ8Ë×ùşï-
-jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥Œ¹²8…×’†ğ-
-\
-squid:S106"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8…×’†ğ-
+squid:S106¹"9Replace this use of System.out or System.err by a logger.(Íû©ùÿÿÿÿ8æ«Úğ-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8æ«Úğ-
+ysquid:S1149-"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ˆµù•şÿÿÿÿ8œ¨şÙğ-
 [
-squid:S106"9Replace this use of System.out or System.err by a logger.(ùÄûšşÿÿÿÿ8¡ĞŸİï-
-wsquid:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8­ÿ²€ğ-
-W
-squid:S106†"9Replace this use of System.out or System.err by a logger.(¸ğÖš8…×’†ğ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(Í‘°ˆùÿÿÿÿ8»ÑÅĞğ-
+wsquid:S2293V"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8æ«Úğ-
 [
-squid:S106."9Replace this use of System.out or System.err by a logger.(Íû©ùÿÿÿÿ8—§ƒ…ğ-
-\
-squid:S106„"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8‰¥‡†ğ-
+squid:S106$"9Replace this use of System.out or System.err by a logger.(Í‘°ˆùÿÿÿÿ8»ÑÅĞğ-
+nsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(ş¦³ùÿÿÿÿ8æ«Úğ-
 W
-squid:S106Š"9Replace this use of System.out or System.err by a logger.(Àå‹æ8…×’†ğ-
+squid:S106‘"9Replace this use of System.out or System.err by a logger.(¸ğÖš8æ«Úğ-
+ssquid:S1149J"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ÑéÁz8æ«Úğ-
 V
-squid:S106 "9Replace this use of System.out or System.err by a logger.(â„à¢8—§ƒ…ğ-
-wsquid:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8…×’†ğ-
-osquid:CommentedOutCodeLine…"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8…×’†ğ-
+squid:S106*"9Replace this use of System.out or System.err by a logger.(ïáÊø8œ¨şÙğ-
+[
+squid:S106#"9Replace this use of System.out or System.err by a logger.(¢œÙ“üÿÿÿÿ8œ¨şÙğ-
+jsquid:CommentedOutCodeLine˜"<This block of commented-out lines of code should be removed.(¥Œ¹²8æ«Úğ-
+Esquid:S1481ğ"&Remove this unused "i" local variable.(»ŸÜš8æ«Úğ-
 W
-squid:S106©"9Replace this use of System.out or System.err by a logger.(©–íí8…×’†ğ-
+squid:S106©"9Replace this use of System.out or System.err by a logger.(â„à¢8æ«Úğ-
+V
+squid:S106""9Replace this use of System.out or System.err by a logger.(‹ëŒ8œ¨şÙğ-
+W
+squid:S106´"9Replace this use of System.out or System.err by a logger.(©–íí8æ«Úğ-
+\
+squid:S106ß"9Replace this use of System.out or System.err by a logger.(æ–İ€ÿÿÿÿÿ8æ«Úğ-
+W
+squid:S106Å"9Replace this use of System.out or System.err by a logger.(÷¬ º8æ«Úğ-
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñ—¸½úÿÿÿÿ8æ«Úğ-
+[
+squid:S106o"9Replace this use of System.out or System.err by a logger.(ôÎŸİüÿÿÿÿ8æ«Úğ-
+\
+squid:S106±"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8æ«Úğ-
+[
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(ùÄûšşÿÿÿÿ8œ¨şÙğ-
