@@ -1,0 +1,18 @@
+
+[
+squid:S106W"9Replace this use of System.out or System.err by a logger.(æ–İ€ÿÿÿÿÿ8¿¾Ê÷ğ-
+hsquid:CommentedOutCodeLine_"<This block of commented-out lines of code should be removed.(êÒÅ.8©¾È÷ğ-
+wsquid:S2293`"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8©¾È÷ğ-
+Dsquid:S1481h"&Remove this unused "i" local variable.(»ŸÜš8©¾È÷ğ-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8¿Ä÷ğ-
+osquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8©¾È÷ğ-
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥Œ¹²8©¾È÷ğ-
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ş×¿Èùÿÿÿÿ8©¾È÷ğ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(â„à¢8Ç÷ğ-
+wsquid:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8¿¾Ê÷ğ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8Ç÷ğ-
+nsquid:CommentedOutCodeLinee"<This block of commented-out lines of code should be removed.(ÙÊÛúşÿÿÿÿ8©¾È÷ğ-
+V
+squid:S106B"9Replace this use of System.out or System.err by a logger.(Ëğ¬Æ8¿¾Ê÷ğ-

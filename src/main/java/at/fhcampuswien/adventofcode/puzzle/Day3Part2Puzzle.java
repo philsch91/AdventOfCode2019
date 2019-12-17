@@ -9,7 +9,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-public class Day3Part1Puzzle extends Puzzle {
+public class Day3Part2Puzzle extends Puzzle {
 
     @Override
     public Object solve() throws IOException {
@@ -18,24 +18,9 @@ public class Day3Part1Puzzle extends Puzzle {
 
         String[] w1 = allLines[0].split(",");
         String[] w2 = allLines[1].split(",");
-        /*
-        int[] bounds = readBounds(w1);
-        System.out.println("minX: " + bounds[0]);
-        System.out.println("maxX: " + bounds[1]);
-        System.out.println("minY: " + bounds[2]);
-        System.out.println("maxY: " + bounds[3]);
 
-        bounds = readBounds(w2);
-        System.out.println("minX: " + bounds[0]);
-        System.out.println("maxX: " + bounds[1]);
-        System.out.println("minY: " + bounds[2]);
-        System.out.println("maxY: " + bounds[3]);
-        */
         Point[] wire1 = parseWire(w1);
         Point[] wire2 = parseWire(w2);
-
-        //System.out.println(wire1.length);
-        //System.out.println(wire2.length);
 
         Hashtable<String, Point> pointTable1 = convertToPointTable(wire1);
         Hashtable<String, Point> pointTable2 = convertToPointTable(wire2);
@@ -43,22 +28,38 @@ public class Day3Part1Puzzle extends Puzzle {
         Point[] crossingPoints = extractCrossingPoints(pointTable1, pointTable2);
         crossingPoints = removeOriginPoint(crossingPoints);
 
-        int leastDistance = calculateManhattanDistance(crossingPoints[0]);
+        return extractShortestWireLength(crossingPoints, wire1, wire2);
+    }
 
-        for(Point p : crossingPoints){
-            //System.out.println(p);
-            int manhattanDistance  = calculateManhattanDistance(p);
+    public int extractShortestWireLength(Point[] crossingPoints, Point[]... wires){
+        int pathCount = wires.length;
 
-            if (manhattanDistance < leastDistance) {
-                leastDistance = manhattanDistance;
+        if (pathCount <= 1){
+            return -1;
+        }
+
+        int shortestLength = -1;
+
+        for(Point crossingPoint : crossingPoints){
+            int i = 0;
+            int length = 0;
+
+            while(i < pathCount){
+                for(Point point : wires[i]){
+                    length++;
+                    if(point.equals(crossingPoint)){
+                        break;
+                    }
+                }
+                i++;
+            }
+
+            if(length < shortestLength || shortestLength == -1){
+                shortestLength = length;
             }
         }
 
-        return leastDistance;
-    }
-
-    public int calculateManhattanDistance(Point point){
-        return Math.abs(point.x) + Math.abs(point.y);
+        return shortestLength;
     }
 
     public Point[] removeOriginPoint(Point[] points){
@@ -121,9 +122,7 @@ public class Day3Part1Puzzle extends Puzzle {
         int x = 0;
         int y = 0;
 
-        //points[0] = new Point(x, y);
-        //pointList.add(new Point(x, y));
-
+        int i = 1;
         for(String str : wire){
             String direction = str.substring(0,1);
             Integer length = Integer.parseInt(str.substring(1));
@@ -162,46 +161,5 @@ public class Day3Part1Puzzle extends Puzzle {
         }
 
         return pointList.toArray(new Point[0]);
-    }
-
-    public int[] readBounds(String[]... wires){
-        int minX = 0;
-        int maxX = 0;
-        int minY = 0;
-        int maxY = 0;
-
-        int x = 0;
-        int y = 0;
-
-        for(String[] wire : wires){
-            for(String str : wire){
-                String direction = str.substring(0,1);
-                Integer length = Integer.parseInt(str.substring(1));
-
-                if (direction.equals("R")){
-                    x += length;
-                } else if (direction.equals("D")){
-                    y -= length;
-                } else if (direction.equals("L")){
-                    x -= length;
-                } else if (direction.equals("U")){
-                    y += length;
-                }
-
-                minX = Math.min(x, minX);
-                maxX = Math.max(x, maxX);
-
-                minY = Math.min(y, minY);
-                maxY = Math.max(y, maxY);
-            }
-        }
-
-        int[] bounds = new int[4];
-        bounds[0] = minX;
-        bounds[1] = maxX;
-        bounds[2] = minY;
-        bounds[3] = maxY;
-
-        return bounds;
     }
 }
