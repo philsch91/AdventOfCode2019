@@ -71,7 +71,7 @@ public class Day3Part1Puzzle extends Puzzle {
         return pointList.toArray(new Point[0]);
     }
 
-    public static Point[] extractCrossingPoints(Map<String, Point>... pointTables){
+    public Point[] extractCrossingPoints(Map<String, Point>... pointTables){
         List<Point> pointList = new ArrayList<Point>();
         Integer pathCount = pointTables.length;
 
@@ -103,7 +103,7 @@ public class Day3Part1Puzzle extends Puzzle {
         return pointList.toArray(new Point[0]);
     }
 
-    public static Hashtable<String, Point> convertToPointTable(Point[] points){
+    public Hashtable<String, Point> convertToPointTable(Point[] points){
         Hashtable<String, Point> pointTable = new Hashtable<>();
 
         for(Point point : points){
@@ -114,7 +114,7 @@ public class Day3Part1Puzzle extends Puzzle {
         return pointTable;
     }
 
-    public static Point[] parseWire(String[] wire){
+    public Point[] parseWire(String[] wire){
         //Point[] points = new Point[wire.length+1];
         List<Point> pointList = new ArrayList<Point>();
 
@@ -172,7 +172,7 @@ public class Day3Part1Puzzle extends Puzzle {
         return pointList.toArray(new Point[0]);
     }
 
-    public static int[] readBounds(String[]... wires){
+    public int[] readBounds(String[]... wires){
         int minX = 0;
         int maxX = 0;
         int minY = 0;
