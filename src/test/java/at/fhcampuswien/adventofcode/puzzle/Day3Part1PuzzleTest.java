@@ -37,7 +37,8 @@ public class Day3Part1PuzzleTest {
         Point[] wire2 =  puzzle.parseWire(w2);
         System.out.println("wire1.length " + wire1.length);
         System.out.println("wire2.length " + wire2.length);
-        assertEquals(154138, wire1.length);
+        //154138
+        assertEquals(153536, wire1.length);
     }
 
     @Test

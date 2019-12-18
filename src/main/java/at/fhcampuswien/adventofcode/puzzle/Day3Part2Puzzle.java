@@ -4,10 +4,7 @@ import at.fhcampuswien.adventofcode.Point;
 import at.fhcampuswien.adventofcode.util.FileUtil;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Day3Part2Puzzle extends Puzzle {
 
@@ -20,7 +17,10 @@ public class Day3Part2Puzzle extends Puzzle {
         String[] w2 = allLines[1].split(",");
 
         Point[] wire1 = parseWire(w1);
+        wire1 = removeOriginPoint(wire1);
+
         Point[] wire2 = parseWire(w2);
+        wire2 = removeOriginPoint(wire2);
 
         Hashtable<String, Point> pointTable1 = convertToPointTable(wire1);
         Hashtable<String, Point> pointTable2 = convertToPointTable(wire2);
@@ -62,10 +62,41 @@ public class Day3Part2Puzzle extends Puzzle {
         return shortestLength;
     }
 
-    public Point[] removeOriginPoint(Point[] points){
+    public Point[] removeDuplicatePointsWithTable(Point[] points){
+        Hashtable<String, Integer> pointCountTable = convertToPointCountTable(points);
         ArrayList<Point> pointList = new ArrayList<>();
-        for(Point point: points){
-            if(point.x != 0 && point.y != 0){
+
+        for(Point point : points){
+            String key = point.toString();
+            if(pointCountTable.containsKey(key) && pointCountTable.get(key) == 1){
+                pointList.add(point);
+            }
+        }
+        return pointList.toArray(new Point[0]);
+    }
+
+    public Point[] removeDuplicatePoints(Point[] points){
+        ArrayList<Point> pointList = new ArrayList<>();
+
+        for(Point point : points){
+            int count = 0;
+            for(Point ipoint : points){
+                if(ipoint.equals(point)){
+                    count++;
+                }
+            }
+
+            if(point.x != 0 && point.y != 0 && count == 1){
+                pointList.add(point);
+            }
+        }
+        return pointList.toArray(new Point[0]);
+    }
+
+    public Point[] removeOriginPoint(Point[] points){
+        List<Point> pointList = new ArrayList<>();
+        for(Point point : points){
+            if(point.x != 0 || point.y != 0){
                 pointList.add(point);
             }
         }
@@ -104,6 +135,20 @@ public class Day3Part2Puzzle extends Puzzle {
         return pointList.toArray(new Point[0]);
     }
 
+    public Hashtable<String, Integer> convertToPointCountTable(Point[] points){
+        Hashtable<String, Integer> pointTable = new Hashtable<>();
+
+        for(Point point : points){
+            int count = 1;
+            String key = point.toString();
+            if(pointTable.containsKey(key)){
+                count += pointTable.get(key);
+            }
+            pointTable.put(point.toString(), count);
+        }
+        return pointTable;
+    }
+
     public Hashtable<String, Point> convertToPointTable(Point[] points){
         Hashtable<String, Point> pointTable = new Hashtable<>();
 
@@ -116,47 +161,54 @@ public class Day3Part2Puzzle extends Puzzle {
     }
 
     public Point[] parseWire(String[] wire){
-        //Point[] points = new Point[wire.length+1];
         List<Point> pointList = new ArrayList<Point>();
 
         int x = 0;
         int y = 0;
 
-        int i = 1;
         for(String str : wire){
             String direction = str.substring(0,1);
             Integer length = Integer.parseInt(str.substring(1));
 
-            Integer xi = x;
-            Integer yi = y;
+            Integer newX = x;
+            Integer newY = y;
 
             if (direction.equals("R")){
-                x += length;
+                newX += length;
             } else if (direction.equals("D")){
-                y -= length;
+                newY -= length;
             } else if (direction.equals("L")){
-                x -= length;
+                newX -= length;
             } else if (direction.equals("U")){
-                y += length;
+                newY += length;
             }
 
-            Integer maxX = Math.max(x, xi);
-            Integer minX = Math.min(x, xi);
-            Integer maxY = Math.max(y, yi);
-            Integer minY = Math.min(y, yi);
-
-            while(minX <= maxX){
-                Point point = new Point(minX, y);
+            while(newX > x){
+                Point point = new Point(x, y);
                 //System.out.println(point);
                 pointList.add(point);
-                minX++;
+                x++;
             }
 
-            while(minY <= maxY){
-                Point point = new Point(x, minY);
+            while(newX < x){
+                Point point = new Point(x, y);
                 //System.out.println(point);
                 pointList.add(point);
-                minY++;
+                x--;
+            }
+
+            while(newY > y){
+                Point point = new Point(x, y);
+                //System.out.println(point);
+                pointList.add(point);
+                y++;
+            }
+
+            while(newY < y){
+                Point point = new Point(x, y);
+                //System.out.println(point);
+                pointList.add(point);
+                y--;
             }
         }
 

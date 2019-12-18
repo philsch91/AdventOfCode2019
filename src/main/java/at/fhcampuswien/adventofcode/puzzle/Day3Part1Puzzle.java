@@ -63,8 +63,8 @@ public class Day3Part1Puzzle extends Puzzle {
 
     public Point[] removeOriginPoint(Point[] points){
         ArrayList<Point> pointList = new ArrayList<>();
-        for(Point point: points){
-            if(point.x != 0 && point.y != 0){
+        for(Point point : points){
+            if(point.x != 0 || point.y != 0){
                 pointList.add(point);
             }
         }
@@ -115,36 +115,33 @@ public class Day3Part1Puzzle extends Puzzle {
     }
 
     public Point[] parseWire(String[] wire){
-        //Point[] points = new Point[wire.length+1];
         List<Point> pointList = new ArrayList<Point>();
 
         int x = 0;
         int y = 0;
 
-        //points[0] = new Point(x, y);
-        //pointList.add(new Point(x, y));
-
         for(String str : wire){
             String direction = str.substring(0,1);
             Integer length = Integer.parseInt(str.substring(1));
 
-            Integer xi = x;
-            Integer yi = y;
+            Integer newX = x;
+            Integer newY = y;
 
             if (direction.equals("R")){
-                x += length;
+                newX += length;
             } else if (direction.equals("D")){
-                y -= length;
+                newY -= length;
             } else if (direction.equals("L")){
-                x -= length;
+                newX -= length;
             } else if (direction.equals("U")){
-                y += length;
+                newY += length;
             }
 
-            Integer maxX = Math.max(x, xi);
-            Integer minX = Math.min(x, xi);
-            Integer maxY = Math.max(y, yi);
-            Integer minY = Math.min(y, yi);
+            /*
+            Integer maxX = Math.max(x, newX);
+            Integer minX = Math.min(x, newX);
+            Integer maxY = Math.max(y, newY);
+            Integer minY = Math.min(y, newY);
 
             while(minX <= maxX){
                 Point point = new Point(minX, y);
@@ -158,6 +155,35 @@ public class Day3Part1Puzzle extends Puzzle {
                 //System.out.println(point);
                 pointList.add(point);
                 minY++;
+            }
+            */
+
+            while(newX > x){
+                Point point = new Point(x, y);
+                //System.out.println(point);
+                pointList.add(point);
+                x++;
+            }
+
+            while(newX < x){
+                Point point = new Point(x, y);
+                //System.out.println(point);
+                pointList.add(point);
+                x--;
+            }
+
+            while(newY > y){
+                Point point = new Point(x, y);
+                //System.out.println(point);
+                pointList.add(point);
+                y++;
+            }
+
+            while(newY < y){
+                Point point = new Point(x, y);
+                //System.out.println(point);
+                pointList.add(point);
+                y--;
             }
         }
 

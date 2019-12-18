@@ -41,3 +41,5 @@ z
 Jsrc/test/java/at/fhcampuswien/adventofcode/puzzle/Day3Part1PuzzleTest.java,a/a/aaa562e1d9447b055726fbc392e442de031313d8
 v
 Fsrc/main/java/at/fhcampuswien/adventofcode/puzzle/Day3Part1Puzzle.java,b/9/b9e0e133858fe78625811e523adbbe942545cb07
+v
+Fsrc/main/java/at/fhcampuswien/adventofcode/puzzle/Day3Part2Puzzle.java,d/d/ddad7a068f435dc91b4f43ae8adc5062d0a1d01f
