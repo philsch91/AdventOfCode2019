@@ -43,3 +43,7 @@ v
 Fsrc/main/java/at/fhcampuswien/adventofcode/puzzle/Day3Part1Puzzle.java,b/9/b9e0e133858fe78625811e523adbbe942545cb07
 v
 Fsrc/main/java/at/fhcampuswien/adventofcode/puzzle/Day3Part2Puzzle.java,d/d/ddad7a068f435dc91b4f43ae8adc5062d0a1d01f
+=
+day32test.txt,1/f/1fad87fcb87506f4f6e640382465003518e8902f
+z
+Jsrc/test/java/at/fhcampuswien/adventofcode/puzzle/Day3Part2PuzzleTest.java,9/6/962bc80d322ccbbfa3074d2f6a723bc37e0c0766

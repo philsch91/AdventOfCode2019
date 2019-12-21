@@ -1,11 +1,11 @@
 
 V
 squid:S106g"9Replace this use of System.out or System.err by a logger.(ÌóåÔ8ªŒ¥ùğ-
+isquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(¾£ş8ìéÚùğ-
+[
+squid:S106T"9Replace this use of System.out or System.err by a logger.(ÿ¬¤ÿÿÿÿÿ8ªŒ¥ùğ-
+wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ù‰¡¦8êñæ÷ğ-
 Msquid:S00108*")Either remove or fill this block of code.(ü·Ã‹şÿÿÿÿ8êñæ÷ğ-
 [
 squid:S106d"9Replace this use of System.out or System.err by a logger.(ğ½´ûÿÿÿÿ8ªŒ¥ùğ-
-isquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(¾£ş8ìéÚùğ-
 usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ˆ©àÿÿÿÿÿ8êñæ÷ğ-
-wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ù‰¡¦8êñæ÷ğ-
-[
-squid:S106T"9Replace this use of System.out or System.err by a logger.(ÿ¬¤ÿÿÿÿÿ8ªŒ¥ùğ-
