@@ -47,3 +47,9 @@ Fsrc/main/java/at/fhcampuswien/adventofcode/puzzle/Day3Part2Puzzle.java,d/d/dda
 day32test.txt,1/f/1fad87fcb87506f4f6e640382465003518e8902f
 z
 Jsrc/test/java/at/fhcampuswien/adventofcode/puzzle/Day3Part2PuzzleTest.java,9/6/962bc80d322ccbbfa3074d2f6a723bc37e0c0766
+8
+day4.txt,2/7/27e33716bd198e10d156ea6b9908a7d1123d22b8
+v
+Fsrc/main/java/at/fhcampuswien/adventofcode/puzzle/Day4Part1Puzzle.java,d/6/d6d7da7f1360f684752cb0e2c3d76ff49aeae073
+z
+Jsrc/test/java/at/fhcampuswien/adventofcode/puzzle/Day4Part1PuzzleTest.java,d/2/d2d326b6f2eb39208c3230e555d7e8035bde1fe6

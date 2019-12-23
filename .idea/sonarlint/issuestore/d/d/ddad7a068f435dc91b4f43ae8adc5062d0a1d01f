@@ -1,18 +1,18 @@
 
-“squid:S1319˜"oThe return type of this method should be an interface such as "Map" rather than the implementation "Hashtable".(¿æü‡úÿÿÿÿ8âžÁÈñ-
 zsquid:S1149˜"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(¿æü‡úÿÿÿÿ8âžÁÈñ-
-Dsquid:S1481s"&Remove this unused "k" local variable.(¼µ‡Ï8âžÁÈñ-
-xsquid:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8âžÁÈñ-
-osquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
-osquid:CommentedOutCodeLineÑ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
-zsquid:S1149™"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(Á¥çõùÿÿÿÿ8”Ô»Èñ-
-ysquid:S1149B"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(óê‚êùÿÿÿÿ8Ê›¶Ãñ-
-osquid:CommentedOutCodeLineÃ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
-“squid:S1319Š"oThe return type of this method should be an interface such as "Map" rather than the implementation "Hashtable".(åÙÃŽøÿÿÿÿ8âžÁÈñ-
-wsquid:S2293k"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8âžÁÈñ-
-ysquid:S1149"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ˆµù•þÿÿÿÿ8Õ†–¬ñ-
-jsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(ðí„Œ8âžÁÈñ-
-usquid:S1149‹"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(§øÎ¥8”Ô»Èñ-
-zsquid:S1149Š"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(åÙÃŽøÿÿÿÿ8âžÁÈñ-
+“squid:S1319˜"oThe return type of this method should be an interface such as "Map" rather than the implementation "Hashtable".(¿æü‡úÿÿÿÿ8âžÁÈñ-
 ysquid:S1149"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(·ÂÆ…üÿÿÿÿ8Õ†–¬ñ-
+zsquid:S1149™"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(Á¥çõùÿÿÿÿ8”Ô»Èñ-
+wsquid:S2293k"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8âžÁÈñ-
+xsquid:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷È¸Ï8âžÁÈñ-
+ysquid:S1149"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(ˆµù•þÿÿÿÿ8Õ†–¬ñ-
+osquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
+zsquid:S1149Š"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(åÙÃŽøÿÿÿÿ8âžÁÈñ-
+“squid:S1319Š"oThe return type of this method should be an interface such as "Map" rather than the implementation "Hashtable".(åÙÃŽøÿÿÿÿ8âžÁÈñ-
+jsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(ðí„Œ8âžÁÈñ-
+osquid:CommentedOutCodeLineÃ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
+osquid:CommentedOutCodeLineÑ"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
 osquid:CommentedOutCodeLine¼"<This block of commented-out lines of code should be removed.(î—°µøÿÿÿÿ8âžÁÈñ-
+Dsquid:S1481s"&Remove this unused "k" local variable.(¼µ‡Ï8âžÁÈñ-
+ysquid:S1149B"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(óê‚êùÿÿÿÿ8Ê›¶Ãñ-
+usquid:S1149‹"VReplace the synchronized class "Hashtable" by an unsynchronized one such as "HashMap".(§øÎ¥8”Ô»Èñ-
